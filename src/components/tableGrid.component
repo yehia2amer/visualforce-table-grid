@@ -128,9 +128,6 @@ THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
                 </apex:column>
                 
                 <apex:column headerValue="Action" styleClass="actionColumn">
-                    <apex:outputPanel layout="none" rendered="{!NOT(currentMode=='singleselect') && $ObjectType[soqlQuery.objectName].Updateable}">
-                        <apex:outputLink styleClass="actionLink" value="{!URLFOR($Action[soqlQuery.objectName].Edit, row.delegate.Id)}" target="_parent">Edit</apex:outputLink>&nbsp;|&nbsp;<apex:outputLink styleClass="actionLink" value="{!URLFOR($Action[soqlQuery.objectName].Delete, row.delegate.Id, [retURL=currentPageUrl])}" target="_parent">Del</apex:outputLink>
-                    </apex:outputPanel>
                     <apex:outputPanel layout="none" rendered="{!currentMode=='singleselect'}">
                         <apex:outputLink rendered="{!currentMode=='select'}" styleClass="actionLink" value="">Select</apex:outputLink>
                     </apex:outputPanel>
